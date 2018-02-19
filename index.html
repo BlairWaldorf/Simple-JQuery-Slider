@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://malsup.github.io/jquery.cycle.all.js"></script>
+    <link rel="stylesheet" href="css/style.css" class="css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+
+    <title>Slider Jquery</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Kitana Wins!</h1>
+      <div class="slider">
+        <img class="img" src="img/slide1.jpg" alt="1">
+        <img class="img" src="img/slide2.jpg" alt="2">
+      </div>
+      <ul id="nav">
+        <li id="prev"><a href="#">Previous</a></li>
+        <li id="next"><a href="#">Next</a></li>
+      </ul>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $('.slider').cycle({
+          fx: 'shuffle',
+          pause: 1,
+          prev: '#next',
+          next: '#prev',
+        });
+      });
+    </script>
+  </body>
+</html>
